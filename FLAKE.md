@@ -26,7 +26,7 @@ On NixOS, add the module instead:
 ```nix
 # flake.nix
 {
-  inputs.ardia.url = "github:ardia-browser/ardia"; # or a path:/git URL to this flake
+  inputs.ardia.url = "github:Atlas-BES/ardia-flake"; # or a path:/git URL to this flake
 
   outputs = { self, nixpkgs, ardia, ... }: {
     nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
@@ -55,7 +55,7 @@ browser's polkit action.
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ardia.url = "github:ardia-browser/ardia"; # or a path:/git URL to this flake
+    ardia.url = "github:Atlas-BES/ardia-flake"; # or a path:/git URL to this flake
   };
 
   outputs = { self, nixpkgs, home-manager, ardia, ... }: {
